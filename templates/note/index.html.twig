@@ -19,6 +19,8 @@
         {% set coef = 0 %}
         {% set totnotes = 0 %}
 
+        <h2> L'étudiant a {{ notes|length }} notes </h2>
+        <h3> Détail des notes : </h3>
         {% for note in notes %}
             <li>{{ 'NoteIndex.matiere'|trans }} : {{ note.matiere.nom }}</li>
             <li>{{ 'NoteIndex.note'|trans }} : {{ note.note }}</li>
@@ -33,6 +35,12 @@
             {% set total = totnotes / coef %}
 
             <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total|number_format(2, '.', ',') }}</p>
+            {% if total >= 10 %}
+                <p class="congrat">{{ 'NoteIndex.congrat'|trans }}</p>
+            {% else %}
+                <p class="try">{{ 'NoteIndex.trymore'|trans }}</p>
+            {% endif %}
+
         {% endif %}
     </ul>
     {% endif %}

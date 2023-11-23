@@ -26,6 +26,8 @@ NoteIndex.date: "Date de création"
 NoteIndex.moyenne: "Moyenne de l'étudiant"
 NoteIndex.retour: "Retour à la page d'accueil"
 NoteIndex.notdispo: "Aucune matière disponible"
+NoteIndex.congrat: "Félicitation, vous avez la moyenne !"
+NoteIndex.trymore: "Essayer d'obtenir une meilleure note !"
 
 # Matieres - Notes
 MatiereNote.coefficient: "Coefficient"

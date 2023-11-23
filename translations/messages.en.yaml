@@ -24,6 +24,8 @@ NoteIndex.date: "Creation Date"
 NoteIndex.retour: "Back to the home page"
 NoteIndex.moyenne: "Student's average"
 NoteIndex.notdispo: "No subject available"
+NoteIndex.congrat: "Congratulation you're above average!"
+NoteIndex.trymore: "Try to obtain a better grade !"
 
 # Matières - Notes
 MatiereNote.coefficient: "Coefficient"
