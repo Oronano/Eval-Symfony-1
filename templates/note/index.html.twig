@@ -29,9 +29,10 @@
             <br>
         {% endfor %}
 
-        {% if total is defined %}
+        {% if totnotes %}
             {% set total = totnotes / coef %}
-            <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total }}</p>
+
+            <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total|number_format(2, '.', ',') }}</p>
         {% endif %}
     </ul>
     {% endif %}
