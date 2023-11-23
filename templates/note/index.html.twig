@@ -34,7 +34,9 @@
         {% if totnotes %}
             {% set total = totnotes / coef %}
 
-            <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total|number_format(2, '.', ',') }}</p>
+            {# <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total|number_format(2, '.', ',') }}</p> #}
+                <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total|round(2) }}</p>
+
             {% if total >= 10 %}
                 <p class="congrat">{{ 'NoteIndex.congrat'|trans }}</p>
             {% else %}
