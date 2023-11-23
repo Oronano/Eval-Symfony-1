@@ -1,0 +1,44 @@
+# Matières - Index.html.twig
+MatiereIndex.titre: "List of Subjects"
+MatiereIndex.nom: "Name"
+MatiereIndex.actions: "Actions"
+MatiereIndex.modifier: "Edit/View"
+MatiereIndex.supprimer: "Delete"
+MatiereIndex.ajouter: "Add a subject!"
+MatiereIndex.note: "View all grades"
+
+# Add.html.twig
+MatiereAdd.titre: "Add a New Subject!"
+
+# Details.html.twig
+MatiereDetails.titre: "Subject Details"
+MatiereDetails.nodata: "No grades for this subject"
+MatiereAddDetails.retour: "Back to the list of subjects"
+
+# Notes - index.html.twig
+NoteIndex.titre: "List of Grades"
+NoteIndex.matiere: "Subject"
+NoteIndex.addNote: "Add a grade"
+NoteIndex.note: "Grade"
+NoteIndex.date: "Creation Date"
+NoteIndex.retour: "Back to the home page"
+NoteIndex.moyenne: "Student's average"
+NoteIndex.notdispo: "No subject available"
+
+# Matières - Notes
+MatiereNote.coefficient: "Coefficient"
+
+# Flash messages
+flash.success: "Modified !"
+flash.Matsuccess: "Subject Added !" 
+flash.added: "Added !"
+flash.delete: "Deleted !"
+flash.Materror: "Error when adding a subject!"
+flash.Matchange: "Error when modifying!"
+flash.Notdelete: "Error when adding a grade!"
+
+# Form
+formMat.submit: "Send"
+formNote.note: "Grade"
+formNote.matiere: "Name"
+formNote.add: "Add grade"

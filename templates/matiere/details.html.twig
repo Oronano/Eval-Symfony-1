@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+  {# {% if allmatiere is not empty %}
+    {{ dump(allmatiere) }}
+  {% else %}
+    <p>{{ 'MatiereDetails.nodata'|trans }}</p>
+  {% endif %} #}
+{% for type, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="alert alert-{{ type }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+  <h2>{{ 'MatiereDetails.titre'|trans }}</h2>
+  
+  {{ form_start(form) }}
+    {{ form_errors(form) }}
+    <br>
+    
+    {{ form_label(form.nom) }}
+    {{ form_widget(form.nom) }}
+    {{ form_row(form.coefficient) }}
+    {{ form_row(form.submit) }}
+    <br>
+    {# <a href="{{ path('matiere_delete' }}">Delete</a> #}
+  {{ form_end(form) }}
+    <a href="{{ path('app_matiere') }}">{{ 'MatiereAddDetails.retour'|trans }}</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ 'MatiereAdd.titre'|trans }}</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.nom) }}
+        {{ form_row(form.coefficient)}}
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+    <a href="{{ path('app_matiere') }}">{{ 'MatiereAddDetails.retour'|trans }}</a>
+    
+{% endblock %}

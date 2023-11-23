@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NoteController!{% endblock %}
+
+{% block body %}
+
+    {% if matieres is empty %}
+        <p>{{ 'NoteIndex.notdispo'|trans }}</p>
+        <a href="{{ path('matiere_add') }}">{{ 'MatiereAdd.titre'|trans }}</a>
+    {% else %}
+    <h1>{{ 'NoteIndex.addNote'|trans }}</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.note) }}
+        {{ form_row(form.matiere)}}
+        {{ form_row(form.submit) }}
+    {{ form_end(form) }}
+
+    <ul>
+        {% set coef = 0 %}
+        {% set totnotes = 0 %}
+
+        {% for note in notes %}
+            <li>{{ 'NoteIndex.matiere'|trans }} : {{ note.matiere.nom }}</li>
+            <li>{{ 'NoteIndex.note'|trans }} : {{ note.note }}</li>
+            <li>{{ 'MatiereNote.coefficient'|trans }} : {{ note.matiere.coefficient }}</li>
+            <li>{{ 'NoteIndex.date'|trans }} : {{ note.dateCreation|date('Y-m-d H:i:s') }}</li>           
+            {% set coef = coef + note.matiere.coefficient %}
+            {% set totnotes = totnotes + note.note * note.matiere.coefficient %}
+            <br>
+        {% endfor %}
+
+        {% if total is defined %}
+            {% set total = totnotes / coef %}
+            <p>{{ 'NoteIndex.moyenne'|trans }} : {{ total }}</p>
+        {% endif %}
+    </ul>
+    {% endif %}
+
+    <a href="{{ path('app_matiere') }}">{{ 'NoteIndex.retour'|trans }}</a>
+    
+{% endblock %}

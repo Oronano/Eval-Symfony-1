@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MatiereController!{% endblock %}
+
+{% block body %}
+{# {% if allmatiere is not empty %}
+        {{ dump(allmatiere) }}
+{% endif %} #}
+    <h1>{{ 'MatiereIndex.titre'|trans }}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">{{ 'MatiereIndex.nom'|trans }}</th>
+                <th scope="col">{{ 'MatiereNote.coefficient'|trans }}</th>
+                <th scope="col">{{ 'MatiereIndex.actions'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for matiere in allmatiere %}
+                <tr>
+                    <td>{{ matiere.nom }}</td>
+                    <td>{{ matiere.coefficient }}</td>
+                    <td>
+                        <a href="{{ path('matiere_details', {'id': matiere.id}) }}">{{ 'MatiereIndex.modifier'|trans }}</a>
+                        <a href="{{ path('matiere_delete', {'id': matiere.id}) }}">{{ 'MatiereIndex.supprimer'|trans }}</a>
+                    </td>
+                </tr>
+            {# {% else %}
+                <tr>
+                    <td colspan="4">Aucune matière trouvée</td>
+                </tr> #}
+            {% endfor %}
+        </tbody>
+    </table>
+<a href="{{ path('matiere_add') }}">{{ 'MatiereIndex.ajouter'|trans }}</a>
+<a href="{{ path('app_note') }}">{{ 'MatiereIndex.note'|trans }}</a>
+
+
+
+{% endblock %}

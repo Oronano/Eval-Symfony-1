@@ -1,0 +1,46 @@
+# Matieres - Index.html.twig
+MatiereIndex.titre: "Liste des Matieres"
+MatiereIndex.nom: "Nom"
+MatiereIndex.actions: "Actions"
+MatiereIndex.modifier: "Modifier/Voir"
+MatiereIndex.supprimer: "Supprimer"
+MatiereIndex.ajouter: "Ajouter une matière!"
+MatiereIndex.note: "Voir toutes les notes"
+
+# Add.html.twig
+MatiereAdd.titre: "Ajouter une nouvelle Matiere !"
+
+# Details.html.twig
+MatiereDetails.titre: "Détails de la matière"
+MatiereDetails.nodata: "Aucune note pour cette matière"
+
+
+MatiereAddDetails.retour: "Retour à la liste des matières"
+
+# Notes - index.html.twig
+NoteIndex.titre: "Liste des notes"
+NoteIndex.matiere: "Matière"
+NoteIndex.addNote: "Ajouter une note"
+NoteIndex.note: "Note"
+NoteIndex.date: "Date de création"
+NoteIndex.moyenne: "Moyenne de l'étudiant"
+NoteIndex.retour: "Retour à la page d'accueil"
+NoteIndex.notdispo: "Aucune matière disponible"
+
+# Matieres - Notes
+MatiereNote.coefficient: "Coefficient"
+
+# Flash messages
+flash.success: "Modifier !"
+flash.Matsuccess: "Matière Ajouter !"
+flash.added: "Ajouté !"
+flash.delete: "Supprimé !"
+flash.Materror: "Erreur lors de l'ajout d'une matière !"
+flash.Matchange: "Erreur lors de la modification !"
+flash.Notdelete: "Erreur lors de l'ajout d'une note !"
+
+# Form
+formMat.submit: "Envoyer"
+formNote.note: "Note"
+formNote.matiere: "Nom"
+formNote.add: "Ajouter la note"
